@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/views/Widgets/custom_app_bar.dart';
-import 'package:note_app/views/Widgets/note_iteam.dart';
+import 'package:note_app/views/Widgets/notes_list_view.dart';
 
 class NoteViewBody extends StatelessWidget {
   const NoteViewBody({super.key});
@@ -18,13 +18,7 @@ class NoteViewBody extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),
-            child: ListView.builder(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.zero,
-              itemBuilder: (context, index) {
-                return NoteIteam();
-              },
-            ),
+            child: NotesListView(),
           ),
         ),
       ],
