@@ -39,10 +39,15 @@ class NoteIteam extends StatelessWidget {
                 ),
               ),
 
-              trailing: FaIcon(FontAwesomeIcons.trash, color: Colors.black),
+              trailing: IconButton(
+                onPressed: () {
+                  note.delete();
+                },
+                icon: FaIcon(FontAwesomeIcons.trash, color: Colors.black),
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 16),
+              padding: const EdgeInsets.only(right: 32),
 
               child: Text(
                 note.date.toString(),
