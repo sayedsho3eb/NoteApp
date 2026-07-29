@@ -4,10 +4,10 @@ import 'package:meta/meta.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/constant.dart';
 
-part 'note_cubit_state.dart';
+part 'note_state.dart';
 
-class NoteCubitCubit extends Cubit<NoteCubitState> {
-  NoteCubitCubit() : super(NoteCubitInitial());
+class NoteCubit extends Cubit<NoteCubitState> {
+  NoteCubit() : super(NoteCubitInitial());
 
   void fetchNote() {
     emit(NoteLoaded());
