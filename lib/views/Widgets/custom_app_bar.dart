@@ -4,10 +4,11 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
     required this.tileAppBar,
-    required this.iconeAppBar,
+    required this.iconeAppBar, required this.onPresses,
   });
   final String tileAppBar;
   final IconData iconeAppBar;
+  final VoidCallback onPresses;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +23,7 @@ class CustomAppBar extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: onPresses,
             icon: Icon(size: 28, iconeAppBar),
           ),
         ),
