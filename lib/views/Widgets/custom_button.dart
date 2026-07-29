@@ -22,7 +22,9 @@ class CustomButton extends StatelessWidget {
                   'Add',
                   style: const TextStyle(color: Colors.black, fontSize: 24),
                 ),
+
         ),
+        
       ),
     );
   }

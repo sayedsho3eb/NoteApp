@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/views/Widgets/add_not_bottom_sheet.dart';
 import 'package:note_app/views/Widgets/note_view_body.dart';
-import 'package:note_app/views/Widgets/show_bottom_sheet.dart';
 
 class NoteView extends StatelessWidget {
   const NoteView({super.key});
@@ -11,6 +11,7 @@ class NoteView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             context: context,
             builder: (context) {
               return AddNoteBottomSheet();
