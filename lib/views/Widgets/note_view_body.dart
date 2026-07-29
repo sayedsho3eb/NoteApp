@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:note_app/views/Widgets/custom_app_bar.dart';
+import 'package:note_app/views/Widgets/note_iteam.dart';
+
+class NoteViewBody extends StatelessWidget {
+  const NoteViewBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(height: 35),
+        CustomAppBar(tileAppBar: 'Notes App', iconeAppBar: Icons.search),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemBuilder: (context, index) {
+                return NoteIteam();
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
