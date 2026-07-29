@@ -17,13 +17,15 @@ class NoteIteam extends StatelessWidget {
         padding: EdgeInsets.only(top: 12, right: 8, left: 8, bottom: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.amberAccent,
+          color: Color(note.color),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               title: Text(
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 note.title,
                 style: TextStyle(fontSize: 38, color: Colors.black),
               ),
@@ -41,6 +43,7 @@ class NoteIteam extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 16),
+
               child: Text(
                 note.date.toString(),
                 style: TextStyle(fontSize: 12, color: Colors.black),
