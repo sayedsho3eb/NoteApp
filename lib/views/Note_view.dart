@@ -4,7 +4,7 @@ import 'package:note_app/views/Widgets/show_bottom_sheet.dart';
 
 class NoteView extends StatelessWidget {
   const NoteView({super.key});
-
+  static String id = 'Note View';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
