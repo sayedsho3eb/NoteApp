@@ -10,6 +10,7 @@ class ShowBottomSheet extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
       child: SingleChildScrollView(
+        
         child: Column(
           children: [
             CustomTextField(hintText: 'Title'),
