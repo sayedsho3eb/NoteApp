@@ -19,9 +19,9 @@ class NoteEditeViewBody extends StatelessWidget {
           iconeAppBar: Icons.check,
         ),
         SizedBox(height: 16),
-        CustomTextField(hintText: 'title'),
+        CustomTextFormField(hintText: 'title'),
         SizedBox(height: 32),
-        CustomTextField(hintText: 'contant', maxLine: 5),
+        CustomTextFormField(hintText: 'contant', maxLine: 5),
       ],
     );
   }
