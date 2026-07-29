@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 
-class MyBlocObserver implements BlocObserver {
+class SimpleBlocObserver implements BlocObserver {
   @override
   void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
     debugPrint('bloc = $change');
@@ -9,12 +9,12 @@ class MyBlocObserver implements BlocObserver {
 
   @override
   void onClose(BlocBase<dynamic> bloc) {
-    debugPrint('bloc = $bloc');
+    debugPrint('blocClose = $bloc');
   }
 
   @override
   void onCreate(BlocBase<dynamic> bloc) {
-    debugPrint('bloc = $bloc');
+    debugPrint('blocCreate = $bloc');
   }
 
   @override

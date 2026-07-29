@@ -12,7 +12,18 @@ class AddNoteBottomSheet extends StatelessWidget {
       create: (context) => AddNoteCubit(),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-        child: AddNoteFormKey(),
+        child: BlocConsumer<AddNoteCubit, AddNoteState>(
+          listener: (context, state) {
+            if (state is AddNoteFailure) {
+              print('ops there was an error');
+            } else if (state is AddNoteSuccess) {
+              print('Success');
+            }
+          },
+          builder: (context, state) {
+            return AddNoteForm();
+          },
+        ),
       ),
     );
   }
