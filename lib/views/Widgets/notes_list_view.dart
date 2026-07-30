@@ -26,7 +26,7 @@ class _NotesListViewState extends State<NotesListView> {
             BlocProvider.of<NotesCubit>(context).notes ?? [];
         return ListView.builder(
           itemCount: notes.length,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
             return NoteIteam(note: notes[index]);

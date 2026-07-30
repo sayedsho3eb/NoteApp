@@ -4,7 +4,8 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
     required this.tileAppBar,
-    required this.iconeAppBar, required this.onPresses,
+    required this.iconeAppBar,
+    required this.onPresses,
   });
   final String tileAppBar;
   final IconData iconeAppBar;
@@ -14,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Notes App', style: TextStyle(fontSize: 24)),
+        const Text('Notes App', style: TextStyle(fontSize: 24)),
         Container(
           height: 50,
           width: 50,

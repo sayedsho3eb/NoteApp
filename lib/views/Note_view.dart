@@ -14,15 +14,15 @@ class NoteView extends StatelessWidget {
             isScrollControlled: true,
             context: context,
             builder: (context) {
-              return AddNoteBottomSheet();
+              return const AddNoteBottomSheet();
             },
           );
         },
         backgroundColor: Colors.blueAccent,
-        child: Icon(Icons.add, color: Colors.black),
+        child: const Icon(Icons.add, color: Colors.black),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
         child: NoteViewBody(),
       ),
     );

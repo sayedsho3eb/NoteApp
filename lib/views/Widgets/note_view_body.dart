@@ -9,15 +9,15 @@ class NoteViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 35),
+        const SizedBox(height: 35),
         CustomAppBar(
           onPresses: () {},
           tileAppBar: 'Notes App',
           iconeAppBar: Icons.search,
         ),
-        Expanded(
+        const Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
+            padding: EdgeInsets.symmetric(vertical: 16),
             child: NotesListView(),
           ),
         ),

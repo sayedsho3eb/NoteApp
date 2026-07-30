@@ -17,14 +17,12 @@ class CustomButton extends StatelessWidget {
         ),
         child: Center(
           child: isLoading
-              ? CircularProgressIndicator(color: Colors.black)
-              : Text(
+              ? const CircularProgressIndicator(color: Colors.black)
+              : const Text(
                   'Add',
-                  style: const TextStyle(color: Colors.black, fontSize: 24),
+                  style: TextStyle(color: Colors.black, fontSize: 24),
                 ),
-
         ),
-        
       ),
     );
   }

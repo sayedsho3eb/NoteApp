@@ -22,8 +22,8 @@ class NoteIteam extends StatelessWidget {
         );
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 10),
-        padding: EdgeInsets.only(top: 12, right: 8, left: 8, bottom: 16),
+        margin: const EdgeInsets.only(bottom: 10),
+        padding: const EdgeInsets.only(top: 12, right: 8, left: 8, bottom: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Color(note.color),
@@ -36,7 +36,7 @@ class NoteIteam extends StatelessWidget {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 note.title,
-                style: TextStyle(fontSize: 38, color: Colors.black),
+                style: const TextStyle(fontSize: 38, color: Colors.black),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -44,7 +44,7 @@ class NoteIteam extends StatelessWidget {
                   note.contant,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                 ),
               ),
 
@@ -53,7 +53,7 @@ class NoteIteam extends StatelessWidget {
                   note.delete();
                   BlocProvider.of<NotesCubit>(context).fetchNote();
                 },
-                icon: FaIcon(FontAwesomeIcons.trash, color: Colors.black),
+                icon: const FaIcon(FontAwesomeIcons.trash, color: Colors.black),
               ),
             ),
             Padding(
@@ -61,7 +61,7 @@ class NoteIteam extends StatelessWidget {
 
               child: Text(
                 note.date.toString(),
-                style: TextStyle(fontSize: 12, color: Colors.black),
+                style: const TextStyle(fontSize: 12, color: Colors.black),
               ),
             ),
           ],

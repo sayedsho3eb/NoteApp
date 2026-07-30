@@ -28,7 +28,7 @@ class CustomTextFormField extends StatelessWidget {
 
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.white),
+        hintStyle: const TextStyle(color: Colors.white),
         focusedBorder: buildBorder(),
         border: buildBorder(),
       ),
@@ -38,7 +38,7 @@ class CustomTextFormField extends StatelessWidget {
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(color: Colors.white),
+      borderSide: const BorderSide(color: Colors.white),
     );
   }
 }
