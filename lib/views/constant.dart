@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const kNotebox = 'notebox';
+
 List<Color> kColorList = const [
   Color(0xff754F44),
   Color(0xff6A7062),
