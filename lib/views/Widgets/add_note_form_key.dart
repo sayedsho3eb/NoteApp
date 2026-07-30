@@ -5,6 +5,7 @@ import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/Widgets/custom_button.dart';
 import 'package:note_app/views/Widgets/custom_text_field.dart';
+import 'package:note_app/views/Widgets/color_list_view.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});
@@ -40,27 +41,16 @@ class _AddNoteFormState extends State<AddNoteForm> {
               hintText: 'contant',
               maxLine: 5,
             ),
-            SizedBox(height: 100),
+            SizedBox(height: 20),
+            ColorListView(),
+            SizedBox(height: 20),
             BlocBuilder<AddNoteCubit, AddNoteState>(
               builder: (context, state) {
                 return CustomButton(
                   isLoading: state is AddNoteLoaded ? true : false,
                   ontap: () {
                     if (formKey.currentState!.validate()) {
-                      formKey.currentState!.save();
-                      String dateFormated = DateFormat(
-                        'yyy-mm-dd',
-                      ).format(DateTime.now());
-                      var notmodel = NoteModel(
-                        title: title!,
-                        contant: contant!,
-
-                        date: dateFormated,
-                        color: Colors.blue.toARGB32(),
-                      );
-                      BlocProvider.of<AddNoteCubit>(
-                        context,
-                      ).addNote(note: notmodel);
+                      validateDataAddNote(context);
                     } else {
                       autovalidateMode = AutovalidateMode.always;
                     }
@@ -73,5 +63,18 @@ class _AddNoteFormState extends State<AddNoteForm> {
         ),
       ),
     );
+  }
+
+  void validateDataAddNote(BuildContext context) {
+    formKey.currentState!.save();
+    String dateFormated = DateFormat('yyy-mm-dd').format(DateTime.now());
+    var notmodel = NoteModel(
+      title: title!,
+      contant: contant!,
+
+      date: dateFormated,
+      color: Colors.blue.toARGB32(),
+    );
+    BlocProvider.of<AddNoteCubit>(context).addNote(note: notmodel);
   }
 }
